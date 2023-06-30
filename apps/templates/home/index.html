@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Primary Meta Tags -->
+    <title>
+        Dự đoán phim điện ảnh
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+    <meta name="author" content="Themesberg">
+    <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+    <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="og:title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+    <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="twitter:title" content="Volt - Free Bootstrap 5 Admin Dashboard">
+    <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ config.ASSETS_ROOT }}/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ config.ASSETS_ROOT }}/img/favicon/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ config.ASSETS_ROOT }}/img/favicon/logo.png">
+    <link rel="manifest" href="{{ config.ASSETS_ROOT }}/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="{{ config.ASSETS_ROOT }}/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Sweet Alert -->
+    <link type="text/css" href="{{ config.ASSETS_ROOT }}/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Notyf -->
+    <link type="text/css" href="{{ config.ASSETS_ROOT }}/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="{{ config.ASSETS_ROOT }}/css/volt.css" rel="stylesheet">
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+</head>
+<body>
+
+<header class="header-global">
+    <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary pt-4 navbar-dark">
+        <div class="container position-relative">
+            <div class="navbar-collapse collapse me-auto" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="/">
+                                <img src="{{ config.ASSETS_ROOT }}/img/brand/light.svg" alt="Volt logo">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <li class="nav-item mr-2">
+                        <img style="max-height: 64px" src="{{ config.ASSETS_ROOT }}/img/favicon/logo.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center ms-auto">
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">Welcome {{ current_user.email }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center ms-auto">
+                <a href="/logout"
+                   target="_blank"
+                   class="btn btn-outline-white d-inline-flex align-items-center me-md-3">
+                    <svg class="icon icon-xxs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg>
+                    Sign out
+                </a>
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <section class="section-header overflow-hidden pt-7 pt-lg-8 pb-9 pb-lg-12 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="bootstrap-big-icon d-none d-lg-block">
+                        <img sizes="700x622" src="{{ config.ASSETS_ROOT }}/img/favicon/logo.png" class="d-block my-1" alt="Logo">
+                    </div>
+                    <h1 class="fw-bolder">Dự án dự đoán doanh thu phim điện ảnh</h1>
+
+                    <h2 class="lead fw-normal text-muted mb-5">
+                        IntroAI Project - Group 29
+                    </h2>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7">
+
+                                <form method="POST" action="{{ url_for('home_blueprint.index') }}">
+                                    {{ form.hidden_tag() }}
+                                    <div class = "row">
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="genre">{{ form.genre.label }}</label>
+                                                {{ form.genre(class="form-select w-100 mb-0", id="genre", aria_label="Genre select example") }}
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div>
+                                                    <label for="budget">{{ form.budget.label }}</label>
+                                                    {{ form.budget(class="form-control", id="budget", type="text", placeholder="Nhập ngân sách ($)", required=True) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <div>
+                                                    <label for="rating">{{ form.rating.label }}</label>
+                                                    {{ form.rating(class="form-control", id="rating", type="text", placeholder="Nhập đánh giá (1-10)", required=True) }}
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div>
+                                                    <label for="runtime">{{ form.runtime.label }}</label>
+                                                    {{ form.runtime(class="form-control", id="runtime", type="text", placeholder="Nhập số ngày", required=True) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Dự đoán tổng doanh thu</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-5">
+                                <h3>Doanh thu dự kiến</h3>
+                                <h3>{{ gross|format_currency }}</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <figure class="position-absolute bottom-0 left-0 w-100 d-none d-md-block mb-n2"><svg class="home-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4"><path d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path></svg></figure>
+    </section>
+    <div class="section pt-0">
+        <div class="container mt-n10 mt-lg-n12 z-2">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <img src="{{ config.ASSETS_ROOT }}/img/mockup-presentation.png" alt="Mockup presentation">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section section-lg bg-soft pt-0">
+        <div class="container">
+            <div class="row justify-content-center mb-5 mb-lg-6">
+                <div class="col-6 col-md-6 text-center mb-4">
+                    <h2>Các thông số thống kê</h2>
+                </div>
+
+
+                <!-- Hiển thị biểu đồ -->
+                <div class="container">
+                    <h3 class="mt-4">Thống kê ngân sách và doanh thu theo thể loại</h3>
+                    <!-- Hiển thị form để chọn thể loại phim -->
+                    <form action="{{ url_for('home_blueprint.index') }}" method="GET">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="row">
+                                    <div class="col">
+
+                                        <select name="genre" id="genre" class="form-select">
+                                            {% for genre in genre_data %}
+                                                <option value="{{ genre.genre }}">{{ genre.genre }} : {{ '{:.2f}'.format(genre.average_ratio) }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm">
+                                <button type="submit" class="btn btn-success">Thống kê</button>
+
+                            </div>
+                        </div>
+                    </form>
+                    {% if plot_url %}
+                        <div class="mt-4">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9">
+                                    <img src="{{ plot_url }}" alt="Budget vs Gross" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="mt-4">Lựa chọn thể loại ở trên để thống kê.</p>
+                    {% endif %}
+                </div>
+
+
+
+                <div class="container">
+                    <h3>Tỉ lệ đánh giá trung bình các thể loại</h3>
+                    <div class="row row-cols-5">
+                        {% for genre in genre_data %}
+                            <div class="col">
+                                <div class="list-group my-2">
+                                    <a href="#my-movies-table" class="list-group-item list-group-item-action">
+                                        <span class="fw-bold">{{ genre.genre }}</span>: {{ '{:.2f}'.format(genre.average_ratio) }}
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <h3 id="my-movies-table">Danh sách dữ liệu đã thống kê</h3>
+                <div class="card border-0 shadow mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-centered table-nowrap mb-0 rounded">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th class="border-0 rounded-start">#</th>
+                                    <th class="border-0">Tên phim</th>
+                                    <th class="border-0">Xếp hạng MPAA</th>
+                                    <th class="border-0">Ngân sách</th>
+                                    <th class="border-0">Doanh thu</th>
+                                    <th class="border-0">Ngày phát hành</th>
+                                    <th class="border-0">Thể loại</th>
+                                    <th class="border-0">Thời lượng</th>
+                                    <th class="border-0">Đánh giá</th>
+                                    <th class="border-0">Số lượng đánh giá</th>
+                                    <th class="border-0">Lợi nhuận</th>
+                                </tr>
+
+                                </thead>
+                                <tbody>
+                                {% for movie in movies.items %}
+                                    <tr>
+                                        <td class="border-0 rounded-start">{{ movie.id }}</td>
+                                        <td class="border-0">{{ movie.title }}</td>
+                                        <td class="border-0">{{ movie.MPAA_Rating }}</td>
+                                        <td class="border-0">{{ movie.budget|format_currency }}</td>
+                                        <td class="border-0">{{ movie.gross|format_currency }}</td>
+                                        <td class="border-0">{{ movie.release_date }}</td>
+                                        <td class="border-0">{{ movie.genre }}</td>
+                                        <td class="border-0">{{ movie.runtime }}</td>
+                                        <td class="border-0">{{ movie.rating }}</td>
+                                        <td class="border-0">{{ movie.rating_count }}</td>
+                                        <td class="border-0">{{ movie.profit|format_currency }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination mb-0">
+                                    {% if movies.has_prev %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ url_for('home_blueprint.index', page=movies.prev_num) }}#my-movies-table">Trước</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item disabled">
+                                            <span class="page-link">Trước</span>
+                                        </li>
+                                    {% endif %}
+
+                                    {% for num in movies.iter_pages() %}
+                                        {% if num %}
+                                            {% if num == movies.page %}
+                                                <li class="page-item active">
+                                                    <span class="page-link">{{ num }}</span>
+                                                </li>
+                                            {% else %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="{{ url_for('home_blueprint.index', page=num) }}">{{ num }}</a>
+                                                </li>
+                                            {% endif %}
+                                        {% else %}
+                                            <li class="page-item disabled">
+                                                <span class="page-link">...</span>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    {% if movies.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="{{ url_for('home_blueprint.index', page=movies.next_num) }}">Tiếp</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item disabled">
+                                            <span class="page-link">Tiếp</span>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
+                            <div class="fw-normal small mt-4 mt-lg-0">Hiển thị <b>{{ movies.items|length }}</b> trên <b>{{ movies.total }}</b> bộ phim
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+</main>
+
+{% include 'includes/scripts.html' %}
+
+</body>
+
+
+
+</html>
