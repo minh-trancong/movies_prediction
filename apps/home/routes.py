@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
+Copyright (c) 2023 - Minh Tran
 """
 from apps.backend.forms import PredictGrossForm
 from apps.home import blueprint
